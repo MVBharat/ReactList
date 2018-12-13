@@ -1,9 +1,18 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import User from './components/User'
 import UniqueId from 'react-html-id'
 
 import logo from './logo.svg';
 import './App.css';
+
+
+  const Temp = () => {
+    return(
+    <Fragment>
+      <div> Home | Contact Us </div>
+    </Fragment>
+    )
+  }
 
 class App extends Component {
 
@@ -45,6 +54,11 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <hr/>
+        <div className="Fragments">
+          <Temp />
+        </div>
+        <hr/><br/>
         <ul>{
 
           this.state.users.map((user, index)=>{
@@ -58,6 +72,8 @@ class App extends Component {
         }
         </ul>
       </div>
+
+
     );
   }
 }
